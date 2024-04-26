@@ -1,0 +1,20 @@
+[package]
+name = "rust-py-template"
+version = "0.1.0"
+edition = "2021"
+description = "Rust python template."
+repository = "https://github.com/wzzju/rust-py-template"
+keywords = ["rust-python", "template"]
+categories = ["science"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[lib]
+name = "rpy"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.21.2", features = ["extension-module", "abi3-py38"] }
+
+[build-dependencies]
+pyo3-build-config = "0.21.2"

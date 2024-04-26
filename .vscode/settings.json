@@ -1,0 +1,10 @@
+{
+  // setting for rust analyzer LSP
+  "rust-analyzer.server.extraEnv": {
+    "PYO3_PYTHON": "./.venv/bin/python"
+  },
+  // setting for running or debugging
+  "rust-analyzer.runnables.extraEnv": {
+    "PYO3_PYTHON": "./.venv/bin/python"
+  }
+}

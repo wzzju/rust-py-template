@@ -1,0 +1,29 @@
+[project]
+name = 'rust-py-template'
+requires-python = '>=3.8'
+authors = [{ name = 'YuChen' }]
+
+dynamic = ['description', 'license', 'readme']
+
+[project.urls]
+Homepage = 'https://github.com/wzzju/rust-py-template'
+Source = 'https://github.com/wzzju/rust-py-template'
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+python-source = "python"
+# the first `rpy` is used for python/rpy
+# the second `rpy` is used for #[pymodule]'s function name
+module-name = "rpy.rpy"
+bindings = 'pyo3'
+features = ["pyo3/extension-module"]
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+
+[project.optional-dependencies]
+testing = ["pytest", "black"]
